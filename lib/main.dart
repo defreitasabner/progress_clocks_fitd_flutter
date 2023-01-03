@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ProgressClocksList(progressClocksList: []),
+      child: const MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
