@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:progress_clocks_fitd_flutter/screens/list_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
@@ -23,9 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: Container(
-        color: Colors.green,
-      ),
+      home: const ListScreen(title: 'Progress Clocks List'),
     );
   }
 }
