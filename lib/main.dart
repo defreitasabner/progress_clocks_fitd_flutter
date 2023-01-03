@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:progress_clocks_fitd_flutter/screens/list_screen.dart';
+import 'package:progress_clocks_fitd_flutter/models/progress_clock.dart';
 import 'package:provider/provider.dart';
 
 import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
+import 'package:progress_clocks_fitd_flutter/screens/list_screen.dart';
 
 void main() {
   runApp(
@@ -14,6 +15,7 @@ void main() {
   );
 }
 
+//TODO: Add routes to home page, clock list page and new clock form
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

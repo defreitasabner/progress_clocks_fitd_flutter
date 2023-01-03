@@ -16,6 +16,7 @@ class ListScreen extends StatefulWidget {
   State<ListScreen> createState() => _ListScreenState();
 }
 
+//TODO: Implement a widget card to each clock in list
 class _ListScreenState extends State<ListScreen> {
 
   @override
@@ -38,6 +39,7 @@ class _ListScreenState extends State<ListScreen> {
         } 
       ),
       floatingActionButton: FloatingActionButton(
+        //TODO: Implement a route to a form to create a new clock
         onPressed: () {} ,
         child: const Icon(Icons.add)
       ),

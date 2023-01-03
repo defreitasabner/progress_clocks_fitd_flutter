@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:progress_clocks_fitd_flutter/models/progress_clock.dart';
 
+//TODO: Implement more methods and change notify in methods ( notifyListener() )
 class ProgressClocksList extends ChangeNotifier {
   
   List<ProgressClock> progressClocksList;
