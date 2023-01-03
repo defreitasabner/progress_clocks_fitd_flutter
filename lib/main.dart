@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
 import 'package:provider/provider.dart';
+
+import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
 
 void main() {
   runApp(
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Progress Clocks (FITD)',
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
