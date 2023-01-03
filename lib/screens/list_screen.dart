@@ -30,9 +30,57 @@ class _ListScreenState extends State<ListScreen> {
           return ListView.builder(
             itemCount: progressClocksList.progressClocksList.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: const Icon(Icons.punch_clock_rounded),
-                title: Text(progressClocksList.progressClocksList[index].name),
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(4)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Icon(
+                              Icons.punch_clock_rounded,
+                              color: Colors.white
+                            ),
+                            Text(
+                              progressClocksList.progressClocksList[index].name,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16
+                              ),
+                            ),
+                            const Icon(
+                              Icons.edit,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                        Container(
+                          color: Colors.white70,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: const [
+                            Icon(
+                              Icons.minimize,
+                              color: Colors.red,
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Colors.green
+                            )
+                          ],
+                        )
+                      ]
+                      ),
+                  ),
+                ),
               );
             },
           );

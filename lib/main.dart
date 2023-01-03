@@ -9,7 +9,7 @@ void main() {
   runApp(
     // Provider which notify changes in ProgressClocksList
     ChangeNotifierProvider(
-      create: (context) => ProgressClocksList(progressClocksList: []),
+      create: (context) => ProgressClocksList(progressClocksList: [ProgressClock(id: 1, name: 'Relógio', maxProgressLevel: 4, currentProgressLevel: 0)]),
       child: const MyApp(),
     )
   );
