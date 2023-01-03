@@ -9,6 +9,7 @@ class ProgressClock {
   // Not required attribute
   String? description;
 
+  // Constructor Method
   ProgressClock({
     required this.id, 
     required this.name,
@@ -17,12 +18,14 @@ class ProgressClock {
     this.description
     });
 
+  // Method to Increase Clock Current Level
   void increaseCurrentProgressLevel() {
     if(currentProgressLevel < maxProgressLevel) {
       currentProgressLevel++;
     }
   }
 
+  // Method to Decrease Clock Current Level
   void decreaseCurrentProgressLevel() {
     if(currentProgressLevel > 0) {
       currentProgressLevel--;

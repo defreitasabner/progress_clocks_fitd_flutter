@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
+    // Provider which notify changes in ProgressClocksList
     ChangeNotifierProvider(
       create: (context) => ProgressClocksList(progressClocksList: []),
       child: const MyApp(),
