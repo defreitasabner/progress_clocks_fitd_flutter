@@ -61,7 +61,10 @@ class _ProgressClockCardState extends State<ProgressClockCard> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    // Decrease currentProgressLevel using ProgressClock method
+                    onPressed: () {
+                      widget.progressClock.decreaseCurrentProgressLevel();
+                    },
                     icon: const Icon(
                       Icons.arrow_back,
                       color: Colors.red,
@@ -81,7 +84,10 @@ class _ProgressClockCardState extends State<ProgressClockCard> {
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    // Increase currentProgressLevel using ProgressClock method
+                    onPressed: () {
+                      widget.progressClock.increaseCurrentProgressLevel();
+                    },
                     icon: const Icon(
                       Icons.arrow_forward,
                       color: Colors.green
