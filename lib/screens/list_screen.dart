@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
 
@@ -31,7 +32,7 @@ class _ListScreenState extends State<ListScreen> {
             itemCount: progressClocksList.progressClocksList.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.black87,
@@ -52,7 +53,7 @@ class _ListScreenState extends State<ListScreen> {
                               progressClocksList.progressClocksList[index].name,
                               style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 16
+                                fontSize: 18
                               ),
                             ),
                             const Icon(
@@ -61,24 +62,41 @@ class _ListScreenState extends State<ListScreen> {
                             )
                           ],
                         ),
-                        Container(
-                          color: Colors.white70,
-                        ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
-                            Icon(
-                              Icons.minimize,
-                              color: Colors.red,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.arrow_back,
+                                color: Colors.red,
+                              ),
+                              iconSize: 36,
                             ),
-                            Icon(
-                              Icons.add,
-                              color: Colors.green
-                            )
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                width: 150,
+                                height: 150,
+                                child: SvgPicture.asset(
+                                  'assets/images/progress_clocks_svg/4/4-0.svg',
+                                  color: Colors.white
+                                ),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.arrow_forward,
+                                color: Colors.green
+                              ),
+                              iconSize: 36,
+                            ),
                           ],
                         )
                       ]
-                      ),
+                    ),
                   ),
                 ),
               );
