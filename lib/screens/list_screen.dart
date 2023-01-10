@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'package:progress_clocks_fitd_flutter/models/progress_clocks_list.dart';
 import 'package:progress_clocks_fitd_flutter/screens/components/progress_clock_card.dart';
+import 'package:progress_clocks_fitd_flutter/screens/new_clock_screen.dart';
 
 class ListScreen extends StatefulWidget {
   
@@ -40,7 +41,12 @@ class _ListScreenState extends State<ListScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         //TODO: Implement a route to a form to create a new clock
-        onPressed: () {} ,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: ((context) => const NewClockScreen())),
+          );
+        } ,
         child: const Icon(Icons.add)
       ),
     );
