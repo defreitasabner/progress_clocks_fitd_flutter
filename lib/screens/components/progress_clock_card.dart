@@ -35,24 +35,18 @@ class _ProgressClockCardState extends State<ProgressClockCard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Icon(
-                    Icons.punch_clock_rounded,
-                    color: Colors.white
-                  ),
                   Text(
                     widget.progressClock.name,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 18
+                      fontSize: 20
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.edit,
-                      color: Colors.white,
+                  Text(
+                    '[${widget.progressClock.currentProgressLevel}/${widget.progressClock.maxProgressLevel}]',
+                    style: const TextStyle(
+                      color: Colors.white
                     ),
-                    iconSize: 24,
                   )
                 ],
               ),
@@ -63,11 +57,13 @@ class _ProgressClockCardState extends State<ProgressClockCard> {
                   IconButton(
                     // Decrease currentProgressLevel using ProgressClock method
                     onPressed: () {
-                      widget.progressClock.decreaseCurrentProgressLevel();
+                      setState(() {
+                        widget.progressClock.decreaseCurrentProgressLevel();
+                      });
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.arrow_back,
-                      color: Colors.red,
+                      color: widget.progressClock.currentProgressLevel > 0? Colors.red : Colors.grey,
                     ),
                     iconSize: 36,
                   ),
@@ -86,11 +82,13 @@ class _ProgressClockCardState extends State<ProgressClockCard> {
                   IconButton(
                     // Increase currentProgressLevel using ProgressClock method
                     onPressed: () {
-                      widget.progressClock.increaseCurrentProgressLevel();
+                      setState(() {
+                        widget.progressClock.increaseCurrentProgressLevel();
+                      });
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.arrow_forward,
-                      color: Colors.green
+                      color: widget.progressClock.currentProgressLevel < widget.progressClock.maxProgressLevel? Colors.green : Colors.grey,
                     ),
                     iconSize: 36,
                   ),
