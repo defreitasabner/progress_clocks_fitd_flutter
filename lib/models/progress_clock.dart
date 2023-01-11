@@ -4,18 +4,14 @@ class ProgressClock {
   int id;
   String name;
   int maxProgressLevel;
-  int currentProgressLevel = 0;
-
-  // Not required attribute
-  String? description;
+  int currentProgressLevel;
 
   // Constructor Method
   ProgressClock({
     required this.id, 
     required this.name,
     required this.maxProgressLevel,
-    required this.currentProgressLevel,
-    this.description
+    required this.currentProgressLevel
     });
 
   // Method to Increase Clock Current Level

@@ -9,20 +9,19 @@ class ProgressClocksList extends ChangeNotifier {
     required this.progressClocksList
   });
 
-  void addProgressClock({
-    required int id, 
+  void addProgressClock({ 
     required String name, 
     required int maxProgressLevel, 
-    required int currentProgressLevel, 
-    String? description
+    int currentProgressLevel = 0
     }) {
 
-    ProgressClock(
-      id: id, 
+    progressClocksList.add(
+      ProgressClock(
+      id: progressClocksList.length, 
       name: name, 
       maxProgressLevel: maxProgressLevel, 
-      currentProgressLevel: currentProgressLevel,
-      description: description != null? description : ''
+      currentProgressLevel: currentProgressLevel
+      )
     );
 
     notifyListeners();
